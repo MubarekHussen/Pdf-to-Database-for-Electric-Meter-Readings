@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.OperatingCurrentTest" optimistic-lock="none" table="operating_current_test">
+        <id name="hjid" type="long">
+            <column name="HJID"/>
+            <generator class="foreign">
+                <param name="property">testBase</param>
+            </generator>
+        </id>
+        <many-to-one class="com.dventus.TestBenchResults" fetch="select" name="testBenchResults">
+            <column name="T_OperatingCurrentTest"/>
+        </many-to-one>
+        <one-to-one class="com.dventus.TestBase" constrained="true" name="testBase"/>
+        <property name="errorPf05lag05a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_05LAG_05A_220V_50HZ_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf05lag10a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_05LAG_10A_220V_50HZ_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf05lag1a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_05LAG_1A_220V_50HZ__0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf05lag20a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_05LAG_20A_220V_50HZ_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf05lag30a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_05LAG_30A_220V_50HZ_0" precision="12" scale="0"/>
+        </property>
+        <property name="metertConstant" type="java.lang.Float">
+            <column name="METERT_CONSTANT" precision="12" scale="0"/>
+        </property>
+        <property name="percentageError" type="java.lang.Float">
+            <column name="PERCENTAGE_ERROR" precision="12" scale="0"/>
+        </property>
+        <property name="URange" type="java.lang.Float">
+            <column name="U_RANGE" precision="12" scale="0"/>
+        </property>
+        <property name="IRange" type="java.lang.Float">
+            <column name="I_RANGE" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf05lag5a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_05LAG_5A_220V_50HZ__0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf05lag60a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_05LAG_60A_220V_50HZ_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf08lead05a220v50h0" type="java.lang.Float">
+            <column name="ERROR_PF_08LEAD_05A_220V_50H_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf08lead10a220v50h0" type="java.lang.Float">
+            <column name="ERROR_PF_08LEAD_10A_220V_50H_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf08lead1a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_08LEAD_1A_220V_50HZ_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf08lead20a220v50h0" type="java.lang.Float">
+            <column name="ERROR_PF_08LEAD_20A_220V_50H_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf08lead30a220v50h0" type="java.lang.Float">
+            <column name="ERROR_PF_08LEAD_30A_220V_50H_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf08lead5a220v50hz0" type="java.lang.Float">
+            <column name="ERROR_PF_08LEAD_5A_220V_50HZ_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf08lead60a220v50h0" type="java.lang.Float">
+            <column name="ERROR_PF_08LEAD_60A_220V_50H_0" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf1025a220v50hz063" type="java.lang.Float">
+            <column name="ERROR_PF_1025A_220V_50HZ_063" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf105a220v50hz023" type="java.lang.Float">
+            <column name="ERROR_PF_105A_220V_50HZ_023" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf110a220v50hz022" type="java.lang.Float">
+            <column name="ERROR_PF_110A_220V_50HZ_022" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf11a220v50hz008" type="java.lang.Float">
+            <column name="ERROR_PF_11A_220V_50HZ_008" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf120a220v50hz029" type="java.lang.Float">
+            <column name="ERROR_PF_120A_220V_50HZ_029" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf130a220v50hz010" type="java.lang.Float">
+            <column name="ERROR_PF_130A_220V_50HZ_010" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf15a220v50hz004" type="java.lang.Float">
+            <column name="ERROR_PF_15A_220V_50HZ_004" precision="12" scale="0"/>
+        </property>
+        <property name="errorPf160a220v50hz007" type="java.lang.Float">
+            <column name="ERROR_PF_160A_220V_50HZ_007" precision="12" scale="0"/>
+        </property>
+        <property name="maxError005ibTo01ibPf1" type="java.lang.Float">
+            <column name="MAX_ERROR_005IB_TO_01IB_PF_1" precision="12" scale="0"/>
+        </property>
+        <property name="maxError01ibTo02ibPf050" type="java.lang.Float">
+            <column name="MAX_ERROR_01IB_TO_02IB_PF_05_0" precision="12" scale="0"/>
+        </property>
+        <property name="maxError01ibTo02ibPf080" type="java.lang.Float">
+            <column name="MAX_ERROR_01IB_TO_02IB_PF_08_0" precision="12" scale="0"/>
+        </property>
+        <property name="maxError01ibToImaxPf1" type="java.lang.Float">
+            <column name="MAX_ERROR_01IB_TO_IMAX_PF_1" precision="12" scale="0"/>
+        </property>
+        <property name="maxError02ibToImaxPf050" type="java.lang.Float">
+            <column name="MAX_ERROR_02IB_TO_IMAX_PF_05_0" precision="12" scale="0"/>
+        </property>
+        <property name="maxError02ibToImaxPf080" type="java.lang.Float">
+            <column name="MAX_ERROR_02IB_TO_IMAX_PF_08_0" precision="12" scale="0"/>
+        </property>
+        <property name="evaluation" type="string">
+            <column length="255" name="EVALUATION"/>
+        </property>
+        <property name="metertConstantPf05" type="java.lang.Float">
+            <column name="METERT_CONSTANT_PF_05" precision="12" scale="0"/>
+        </property>
+        <property name="percentageErrorPf05" type="java.lang.Float">
+            <column name="PERCENTAGE_ERROR_PF_05" precision="12" scale="0"/>
+        </property>
+        <property name="URangePf05" type="java.lang.Float">
+            <column name="U_RANGE_PF_05" precision="12" scale="0"/>
+        </property>
+        <property name="IRangePf05" type="java.lang.Float">
+            <column name="I_RANGE_PF_05" precision="12" scale="0"/>
+        </property>
+        <property name="evaluationPf05" type="string">
+            <column length="255" name="EVALUATION_PF_05"/>
+        </property>
+        <property name="metertConstantPf1" type="java.lang.Float">
+        	<column name="METERT_CONSTANT_PF_1" precision="12" scale="0"/>
+        </property>
+        <property name="percentageErrorPf1" type="java.lang.Float">
+            <column name="PERCENTAGE_ERROR_PF_1" precision="12" scale="0"/>
+        </property>
+        <property name="URangePf1" type="java.lang.Float">
+            <column name="U_RANGE_PF_1" precision="12" scale="0"/>
+        </property>
+        <property name="IRangePf1" type="java.lang.Float">
+            <column name="I_RANGE_PF_1" precision="12" scale="0"/>
+        </property>
+        <property name="evaluationPf1" type="string">
+            <column length="255" name="EVALUATION_PF_1"/>
+        </property>
+    </class>
+</hibernate-mapping>

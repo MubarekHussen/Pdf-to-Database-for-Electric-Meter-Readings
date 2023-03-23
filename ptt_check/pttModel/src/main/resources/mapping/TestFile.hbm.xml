@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.TestFile" optimistic-lock="none" table="test_file">
+        <id name="fileName" type="string">
+            <column length="255" name="FILE_NAME"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="fileId" type="string">
+            <column length="255" name="FILE_ID"/>
+        </property>
+        <property name="fileData" type="binary">
+            <column name="FILE_DATA"/>
+        </property>
+        <property name="fileLength" type="big_integer">
+            <column name="FILE_LENGTH" precision="20" scale="0"/>
+        </property>
+        <property name="fileProp" type="string">
+            <column length="255" name="FILE_PROP"/>
+        </property>
+    </class>
+</hibernate-mapping>

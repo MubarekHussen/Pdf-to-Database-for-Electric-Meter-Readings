@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.Meter" optimistic-lock="none" table="meter">
+        <id name="frontCoverSn" type="string">
+            <column length="255" name="FRONT_COVER_SN"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.dventus.CircuitBoard" fetch="select" name="circuitBoard">
+            <column length="255" name="CIRCUIT_BOARD_METER_FRONT_CO_0"/>
+        </many-to-one>
+        <many-to-one class="com.dventus.Package" fetch="select" name="package">
+            <column length="255" name="PARENT_PACKAGE"/>
+        </many-to-one>
+        <property name="boxNumber" type="string">
+            <column length="255" name="BOX_NUMBER"/>
+        </property>
+        <property name="macAddress" type="string">
+            <column length="255" name="MAC_ADDRESS"/>
+        </property>
+        <property name="modelNumber" type="string">
+            <column length="255" name="MODEL_NUMBER"/>
+        </property>
+        <property name="packFlag" type="java.lang.Boolean">
+            <column name="PACK_FLAG"/>
+        </property>
+        <property name="packStatus" type="java.lang.Boolean">
+            <column name="PACK_STATUS"/>
+        </property>
+        <property name="propertyNumber" type="string">
+            <column length="255" name="PROPERTY_NUMBER"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="logs" table="log">
+            <key>
+                <column length="255" name="METER_LOG"/>
+            </key>
+            <one-to-many class="com.dventus.Log"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="remarks" table="remark">
+            <key>
+                <column length="255" name="METER_REMARK"/>
+            </key>
+            <one-to-many class="com.dventus.Remark"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="meterTests" table="meter_test">
+            <key>
+                <column length="255" name="METER_TEST"/>
+            </key>
+            <one-to-many class="com.dventus.MeterTest"/>
+        </set>
+    </class>
+</hibernate-mapping>

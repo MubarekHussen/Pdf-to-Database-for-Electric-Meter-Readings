@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.UserGroup" optimistic-lock="none" table="user_group">
+        <id name="id" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.dventus.User" fetch="select" name="user">
+            <column name="USER_GROUPS_USER__USER_ID">
+                <comment>USER_GROUPS_USER__USER_ID for windows</comment>
+            </column>
+        </many-to-one>
+        <many-to-one class="com.dventus.Role" fetch="select" name="role">
+            <column name="USER_GROUPS_ROLE__ID"/>
+        </many-to-one>
+        <property name="groupId" type="string">
+            <column length="255" name="GROUP_ID" unique="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="userGroupUsersMaps" table="user_group_users_map">
+            <key>
+                <column name="G_ID" not-null="true"/>
+            </key>
+            <one-to-many class="com.dventus.UserGroupUsersMap"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="userGroupRolesMaps" table="user_group_roles_map">
+            <key>
+                <column name="G_ID" not-null="true"/>
+            </key>
+            <one-to-many class="com.dventus.UserGroupRolesMap"/>
+        </set>
+    </class>
+</hibernate-mapping>

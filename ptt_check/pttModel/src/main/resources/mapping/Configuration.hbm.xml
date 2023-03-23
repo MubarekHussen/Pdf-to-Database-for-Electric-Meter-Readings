@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.Configuration" optimistic-lock="none" table="configuration">
+        <id name="configurationName" type="int">
+            <column name="CONFIGURATION_NAME"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="packageBoxSize" type="java.lang.Integer">
+            <column name="PACKAGE_BOX_SIZE"/>
+        </property>
+    </class>
+</hibernate-mapping>

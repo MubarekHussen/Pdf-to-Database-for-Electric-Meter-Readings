@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.Package" optimistic-lock="none" table="package">
+        <id name="packageSn" type="string">
+            <column length="255" name="PACKAGE_SN"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="shipmentFlag" type="java.lang.Boolean">
+            <column name="SHIPMENT_FLAG"/>
+        </property>
+        <property name="shipmentStatus" type="java.lang.Boolean">
+            <column name="SHIPMENT_STATUS"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="remarks" table="remark">
+            <key>
+                <column length="255" name="PACKAGE_REMARK"/>
+            </key>
+            <one-to-many class="com.dventus.Remark"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="meters" table="meter">
+            <key>
+                <column length="255" name="PARENT_PACKAGE"/>
+            </key>
+            <one-to-many class="com.dventus.Meter"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="logs" table="log">
+            <key>
+                <column length="255" name="PACKAGE_LOG"/>
+            </key>
+            <one-to-many class="com.dventus.Log"/>
+        </set>
+    </class>
+</hibernate-mapping>

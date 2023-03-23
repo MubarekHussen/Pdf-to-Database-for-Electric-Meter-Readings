@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.EnergyRegisterTest" optimistic-lock="none" table="energy_register_test">
+        <id name="hjid" type="long">
+            <column name="HJID"/>
+            <generator class="foreign">
+                <param name="property">testBase</param>
+            </generator>
+        </id>
+        <many-to-one class="com.dventus.TestBenchResults" fetch="select" name="testBenchResults">
+            <column name="T_EnergyRegisterTest"/>
+        </many-to-one>
+        <one-to-one class="com.dventus.TestBase" constrained="true" name="testBase"/>
+        <property name="endEnergy" type="java.lang.Float">
+            <column name="END_ENERGY" precision="12" scale="0"/>
+        </property>
+        <property name="dosageEnergy" type="java.lang.Float">
+            <column name="DOSAGE_ENERGY" precision="12" scale="0"/>
+        </property>
+        <property name="percentError" type="java.lang.Float">
+            <column name="PERCENT_ERROR" precision="12" scale="0"/>
+        </property>
+        <property name="startEnergy" type="java.lang.Float">
+            <column name="START_ENERGY" precision="12" scale="0"/>
+        </property>
+        <property name="evaluation" type="string">
+            <column length="255" name="EVALUATION"/>
+        </property>
+    </class>
+</hibernate-mapping>

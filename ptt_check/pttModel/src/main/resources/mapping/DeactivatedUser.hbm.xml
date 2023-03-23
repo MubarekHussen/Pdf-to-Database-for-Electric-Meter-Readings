@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.DeactivatedUser" optimistic-lock="none" table="deactivated_user">
+        <id name="id" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="adminUser" type="java.lang.Boolean">
+            <column name="ADMIN_USER"/>
+        </property>
+        <property name="city" type="string">
+            <column length="255" name="CITY"/>
+        </property>
+        <property name="email" type="string">
+            <column length="255" name="EMAIL"/>
+        </property>
+        <property name="firstName" type="string">
+            <column length="255" name="FIRST_NAME"/>
+        </property>
+        <property name="homeNumber" type="string">
+            <column length="255" name="HOME_NUMBER"/>
+        </property>
+        <property name="kebele" type="string">
+            <column length="255" name="KEBELE"/>
+        </property>
+        <property name="lastName" type="string">
+            <column length="255" name="LAST_NAME"/>
+        </property>
+        <property name="middleName" type="string">
+            <column length="255" name="MIDDLE_NAME"/>
+        </property>
+        <property name="mobileNumber" type="string">
+            <column length="255" name="MOBILE_NUMBER"/>
+        </property>
+        <property name="nationality" type="string">
+            <column length="255" name="NATIONALITY"/>
+        </property>
+        <property name="phoneNumber" type="string">
+            <column length="255" name="PHONE_NUMBER"/>
+        </property>
+        <property name="subcity" type="string">
+            <column length="255" name="SUBCITY"/>
+        </property>
+        <property name="token" type="string">
+            <column length="255" name="TOKEN"/>
+        </property>
+        <property name="tokenExpireTime" type="timestamp">
+            <column length="19" name="TOKEN_EXPIRE_TIME"/>
+        </property>
+        <property name="userId" type="string">
+            <column length="255" name="USER_ID"/>
+        </property>
+        <property name="userPassword" type="string">
+            <column length="255" name="USER_PASSWORD"/>
+        </property>
+        <property name="woreda" type="string">
+            <column length="255" name="WOREDA"/>
+        </property>
+        <property name="activeId" type="java.lang.Long">
+            <column name="ACTIVE_ID"/>
+        </property>
+    </class>
+</hibernate-mapping>

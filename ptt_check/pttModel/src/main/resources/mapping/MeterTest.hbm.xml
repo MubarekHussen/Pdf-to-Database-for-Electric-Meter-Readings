@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.MeterTest" optimistic-lock="none" table="meter_test">
+        <id name="hjid" type="java.lang.Long">
+            <column name="HJID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.dventus.Meter" fetch="select" name="meter">
+            <column length="255" name="METER_TEST"/>
+        </many-to-one>
+        <property name="comment" type="string">
+            <column length="255" name="COMMENT_"/>
+        </property>
+        <property name="frontCoverSn" type="string">
+            <column length="255" name="FRONT_COVER_SN"/>
+        </property>
+        <property name="meterPosition" type="string">
+            <column length="255" name="METER_POSITION"/>
+        </property>
+        <property name="sampleBased" type="string">
+            <column length="255" name="SAMPLE_BASED"/>
+        </property>
+        <property name="sessionId" type="string">
+            <column length="255" name="SESSION_ID"/>
+        </property>
+        <property name="testBenchName" type="string">
+            <column length="255" name="TEST_BENCH_NAME"/>
+        </property>
+        <property name="testEndTime" type="string">
+            <column length="255" name="TEST_END_TIME"/>
+        </property>
+        <property name="testFileName" type="string">
+            <column length="255" name="TEST_FILE_NAME"/>
+        </property>
+        <property name="testPeronnel" type="string">
+            <column length="255" name="TEST_PERONNEL"/>
+        </property>
+        <property name="testPlace" type="string">
+            <column length="255" name="TEST_PLACE"/>
+        </property>
+        <property name="testStartTime" type="string">
+            <column length="255" name="TEST_START_TIME"/>
+        </property>
+        <property name="totalEvaluation" type="string">
+            <column length="255" name="TOTAL_EVALUATION"/>
+        </property>
+        <property name="procurmentRefNo" type="string">
+            <column length="255" name="PROCURMENT_REF_NO"/>
+        </property>
+        <property name="reportedFor" type="string">
+            <column length="255" name="REPORTED_FOR"/>
+        </property>
+        <one-to-one class="com.dventus.MeterAdj" name="meterAdj"/>
+    </class>
+</hibernate-mapping>

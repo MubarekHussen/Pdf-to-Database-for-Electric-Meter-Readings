@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.CalibrationTest" optimistic-lock="none" table="calibration_test">
+        <id name="hjid" type="long">
+            <column name="HJID"/>
+            <generator class="foreign">
+                <param name="property">testBase</param>
+            </generator>
+        </id>
+        <many-to-one class="com.dventus.TestBenchResults" fetch="select" name="testBenchResults">
+            <column name="T_CalibrationTest"/>
+        </many-to-one>
+        <one-to-one class="com.dventus.TestBase" constrained="true" name="testBase"/>
+        <property name="calibrationState" type="string">
+            <column length="255" name="CALIBRATION_STATE"/>
+        </property>
+        <property name="cr" type="java.lang.Integer">
+            <column name="CR"/>
+        </property>
+        <property name="elo" type="java.lang.Integer">
+            <column name="ELO"/>
+        </property>
+        <property name="ehi" type="java.lang.Integer">
+            <column name="EHI"/>
+        </property>
+        <property name="gco" type="java.lang.Integer">
+            <column name="GCO"/>
+        </property>
+        <property name="poff" type="java.lang.Integer">
+            <column name="POFF"/>
+        </property>
+        <property name="phCo" type="java.lang.Integer">
+            <column name="PH_CO"/>
+        </property>
+        <property name="stCint" type="java.lang.Integer">
+            <column name="ST_CINT"/>
+        </property>
+        <property name="stCfra" type="java.lang.Integer">
+            <column name="ST_CFRA"/>
+        </property>
+        <property name="vr" type="java.lang.Integer">
+            <column name="VR"/>
+        </property>
+        <property name="phCo0" type="java.lang.Integer">
+            <column name="PH_CO_0"/>
+        </property>
+        <property name="phCo1" type="java.lang.Integer">
+            <column name="PH_CO_1"/>
+        </property>
+        <property name="phCo2" type="java.lang.Integer">
+            <column name="PH_CO_2"/>
+        </property>
+        <property name="phCo3" type="java.lang.Integer">
+            <column name="PH_CO_3"/>
+        </property>
+        <property name="meterIdnumeric" type="string">
+            <column length="255" name="METER_IDNUMERIC"/>
+        </property>
+        <property name="errors" type="string">
+            <column length="255" name="ERRORS"/>
+        </property>
+        <property name="idpasswordStatus" type="string">
+            <column length="255" name="IDPASSWORD_STATUS"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="ptt" match-name="board_test"/>
+  <table-filter match-catalog="ptt" match-name="calibration_test"/>
+  <table-filter match-catalog="ptt" match-name="circuit_board"/>
+  <table-filter match-catalog="ptt" match-name="configuration"/>
+  <table-filter match-catalog="ptt" match-name="customer"/>
+  <table-filter match-catalog="ptt" match-name="deactivated_user"/>
+  <table-filter match-catalog="ptt" match-name="effective_permissions"/>
+  <table-filter match-catalog="ptt" match-name="energy_and_tamper_clear_test"/>
+  <table-filter match-catalog="ptt" match-name="energy_register_test"/>
+  <table-filter match-catalog="ptt" match-name="log"/>
+  <table-filter match-catalog="ptt" match-name="meter"/>
+  <table-filter match-catalog="ptt" match-name="meter_adj"/>
+  <table-filter match-catalog="ptt" match-name="meter_test"/>
+  <table-filter match-catalog="ptt" match-name="neutral_impedance_test"/>
+  <table-filter match-catalog="ptt" match-name="no_load_test"/>
+  <table-filter match-catalog="ptt" match-name="operating_current_test"/>
+  <table-filter match-catalog="ptt" match-name="package"/>
+  <table-filter match-catalog="ptt" match-name="remark"/>
+  <table-filter match-catalog="ptt" match-name="role"/>
+  <table-filter match-catalog="ptt" match-name="role_permissions"/>
+  <table-filter match-catalog="ptt" match-name="sc_adjustment"/>
+  <table-filter match-catalog="ptt" match-name="shunt_impedance_test"/>
+  <table-filter match-catalog="ptt" match-name="starting_current_test"/>
+  <table-filter match-catalog="ptt" match-name="test_base"/>
+  <table-filter match-catalog="ptt" match-name="test_bench_results"/>
+  <table-filter match-catalog="ptt" match-name="test_file"/>
+  <table-filter match-catalog="ptt" match-name="user"/>
+  <table-filter match-catalog="ptt" match-name="user_group"/>
+  <table-filter match-catalog="ptt" match-name="user_group_roles_map"/>
+  <table-filter match-catalog="ptt" match-name="user_group_users_map"/>
+  <table-filter match-catalog="ptt" match-name="user_permissions"/>
+</hibernate-reverse-engineering>

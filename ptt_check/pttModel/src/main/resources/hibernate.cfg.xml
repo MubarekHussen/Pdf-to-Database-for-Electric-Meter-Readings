@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">Muba@mysql14</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ptt</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <mapping resource="mapping/TestBase.hbm.xml"/>
+		<mapping resource="mapping/CalibrationTest.hbm.xml"/>
+		<mapping resource="mapping/Remark.hbm.xml"/>
+		<mapping resource="mapping/Role.hbm.xml"/>
+		<mapping resource="mapping/RolePermissions.hbm.xml"/>
+		<mapping resource="mapping/ScAdjustment.hbm.xml"/>
+		<mapping resource="mapping/ShuntImpedanceTest.hbm.xml"/>
+		<mapping resource="mapping/StartingCurrentTest.hbm.xml"/>
+		<mapping resource="mapping/TestBase.hbm.xml"/>
+		<mapping resource="mapping/TestBenchResults.hbm.xml"/>
+		<mapping resource="mapping/TestFile.hbm.xml"/>
+		<mapping resource="mapping/User.hbm.xml"/>
+		<mapping resource="mapping/UserGroup.hbm.xml"/>
+		<mapping resource="mapping/UserGroupRolesMap.hbm.xml"/>
+		<mapping resource="mapping/UserGroupUsersMap.hbm.xml"/>
+		<mapping resource="mapping/UserPermissions.hbm.xml"/>
+		<mapping resource="mapping/BoardTest.hbm.xml"/>
+		<mapping resource="mapping/EnergyAndTamperClearTest.hbm.xml"/>
+		<mapping resource="mapping/CircuitBoard.hbm.xml"/>
+		<mapping resource="mapping/Configuration.hbm.xml"/>
+		<mapping resource="mapping/Customer.hbm.xml"/>
+		<mapping resource="mapping/DeactivatedUser.hbm.xml"/>
+		<mapping resource="mapping/EffectivePermissions.hbm.xml"/>
+		<mapping resource="mapping/EnergyRegisterTest.hbm.xml"/>
+		<mapping resource="mapping/Log.hbm.xml"/>
+		<mapping resource="mapping/Meter.hbm.xml"/>
+		<mapping resource="mapping/MeterTest.hbm.xml"/>
+		<mapping resource="mapping/NeutralImpedanceTest.hbm.xml"/>
+		<mapping resource="mapping/NoLoadTest.hbm.xml"/>
+		<mapping resource="mapping/OperatingCurrentTest.hbm.xml"/>
+		<mapping resource="mapping/Package.hbm.xml"/>
+		<mapping resource="mapping/MeterAdj.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

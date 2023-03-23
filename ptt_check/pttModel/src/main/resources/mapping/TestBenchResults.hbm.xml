@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2022, 4:50:42 PM by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="ptt" name="com.dventus.TestBenchResults" optimistic-lock="none" table="test_bench_results">
+        <id name="hjid" type="java.lang.Long">
+            <column name="HJID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="meterId" type="string">
+            <column length="255" name="METER_ID"/>
+        </property>
+        <property name="totalEvaluation" type="string">
+            <column length="255" name="TOTAL_EVALUATION"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="noLoadTests" table="no_load_test">
+            <key>
+                <column name="T_NoLoadTest"/>
+            </key>
+            <one-to-many class="com.dventus.NoLoadTest"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="shuntImpedanceTests" table="shunt_impedance_test">
+            <key>
+                <column name="T_ShuntImpedanceTest"/>
+            </key>
+            <one-to-many class="com.dventus.ShuntImpedanceTest"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="calibrationTests" table="calibration_test">
+            <key>
+                <column name="T_CalibrationTest"/>
+            </key>
+            <one-to-many class="com.dventus.CalibrationTest"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="energyRegisterTests" table="energy_register_test">
+            <key>
+                <column name="T_EnergyRegisterTest"/>
+            </key>
+            <one-to-many class="com.dventus.EnergyRegisterTest"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="startingCurrentTests" table="starting_current_test">
+            <key>
+                <column name="T_StartingCurrentTest"/>
+            </key>
+            <one-to-many class="com.dventus.StartingCurrentTest"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="neutralImpedanceTests" table="neutral_impedance_test">
+            <key>
+                <column name="T_NeutralImpedanceTest"/>
+            </key>
+            <one-to-many class="com.dventus.NeutralImpedanceTest"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="energyAndTamperClearTests" table="energy_and_tamper_clear_test">
+            <key>
+                <column name="T_EnergyAndTamperClearTest"/>
+            </key>
+            <one-to-many class="com.dventus.EnergyAndTamperClearTest"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="circuitBoards" table="circuit_board">
+            <key>
+                <column name="TEST_BENCH_RESULTS_CIRCUIT_B_0"/>
+            </key>
+            <one-to-many class="com.dventus.CircuitBoard"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="operatingCurrentTests" table="operating_current_test">
+            <key>
+                <column name="T_OperatingCurrentTest"/>
+            </key>
+            <one-to-many class="com.dventus.OperatingCurrentTest"/>
+        </set>
+    </class>
+</hibernate-mapping>
