@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TestBaseRepo extends CrudRepository<TestBase,
 Long> {
-	Optional<TestBase> findById(Long hjid);
+	Optional<TestBase> findByfrontCoverSn(String frontCoverSn);
 	List<TestBase> findAll();
 }

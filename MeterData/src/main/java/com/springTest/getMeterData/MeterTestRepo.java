@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MeterTestRepo extends CrudRepository<MeterTest,
 Long> {
-	Optional<MeterTest> findById(Long hjid);
+	Optional<MeterTest> findByhjid(Long hjid);
 	List<MeterTest> findAll();
 }

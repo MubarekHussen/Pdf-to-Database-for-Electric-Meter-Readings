@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ScAdjustmentRepo extends CrudRepository<ScAdjustment,
 Long> {
-	Optional<ScAdjustment> findById(Long hjid);
+	Optional<ScAdjustment> findByhjid(Long hjid);
 	List<ScAdjustment> findAll();
 }

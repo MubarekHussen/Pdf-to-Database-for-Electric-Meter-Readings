@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface StartingCurrentRepo extends CrudRepository<StartingCurrentTest,
 Long> {
-	Optional<StartingCurrentTest> findById(Long hjid);
+	Optional<StartingCurrentTest> findByhjid(Long hjid);
 	List<StartingCurrentTest> findAll();
 }

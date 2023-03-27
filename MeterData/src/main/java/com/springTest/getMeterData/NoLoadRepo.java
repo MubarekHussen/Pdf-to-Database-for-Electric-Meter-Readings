@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface NoLoadRepo extends CrudRepository<NoLoadTest,
 Long> {
-	Optional<NoLoadTest> findById(Long hjid);
+	Optional<NoLoadTest> findByhjid(Long hjid);
 	List<NoLoadTest> findAll();
 }

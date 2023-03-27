@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface TestFileRepo extends CrudRepository<TestFile,
 String> {
-	Optional<TestFile> findById(String fileName);
+	Optional<TestFile> findByfileId(String fileId);
 	List<TestFile> findAll();
 }

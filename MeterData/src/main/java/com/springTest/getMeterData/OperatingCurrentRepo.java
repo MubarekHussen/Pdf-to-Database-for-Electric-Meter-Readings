@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OperatingCurrentRepo extends CrudRepository<OperatingCurrentTest,
 Long> {
-	Optional<OperatingCurrentTest> findById(Long hjid);
+	Optional<OperatingCurrentTest> findByhjid(Long hjid);
 	List<OperatingCurrentTest> findAll();
 }

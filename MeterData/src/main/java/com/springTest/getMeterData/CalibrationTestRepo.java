@@ -7,8 +7,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EnergyRegisterRepo extends CrudRepository<EnergyRegisterTest,
+public interface CalibrationTestRepo extends CrudRepository<CalibrationTest,
 Long> {
-	Optional<EnergyRegisterTest> findByhjid(Long hjid);
-	List<EnergyRegisterTest> findAll();
+	Optional<CalibrationTest> findByhjid(Long hjid);
+	List<CalibrationTest> findAll();
 }
